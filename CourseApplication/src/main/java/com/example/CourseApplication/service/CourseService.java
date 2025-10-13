@@ -13,8 +13,12 @@ public class CourseService {
     @Autowired
     CourseRepo courseRepo;
 
+
     public List<Course> availableCourses() {
         return courseRepo.findAll();
     }
+
+
+   
 
 }

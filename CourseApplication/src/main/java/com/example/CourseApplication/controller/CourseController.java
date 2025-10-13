@@ -19,4 +19,5 @@ public class CourseController {
     public List<Course> availableCourses() {
         return courseService.availableCourses();
     }
+
 }
