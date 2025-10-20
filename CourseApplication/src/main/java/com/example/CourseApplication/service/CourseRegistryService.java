@@ -17,4 +17,15 @@ public class CourseRegistryService {
      public List<CourseRegistry> enrolledStudents() {
         return courseRegistryRepo.findAll();
     }
+
+
+
+    public void registerNew(String studentName, String studentEmail, String courseName) {
+        CourseRegistry newEntry = new CourseRegistry();
+        newEntry.setStudentName(studentName);
+        newEntry.setStudentEmail(studentEmail);
+        newEntry.setCourseName(courseName);
+
+        courseRegistryRepo.save(newEntry);
+    }
 }
